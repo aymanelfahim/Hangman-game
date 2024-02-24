@@ -40,7 +40,7 @@ int main() {
     char lettre;
     int n = 0;
 
-    while (n < 10) {
+    while (n < 11) {
         int lettre_trouvee = 0;
         printf("Mot à deviner : %s\n", mot_decouvert);
         printf("Entrez une lettre : ");
