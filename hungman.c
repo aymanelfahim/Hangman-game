@@ -62,7 +62,7 @@ int main() {
         }
     }
 
-    if (n == 10) {
+    if (n == 11) {
         printf("Désolé, vous avez perdu. Le mot était : %s\n", mot_a_trouver);
     }
 
