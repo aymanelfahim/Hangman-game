@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <time.h>
 char cartoon[10][70] = {
     "\n\n\n\n\n\n_______\n",
     "\n   |\n   |\n   |\n   |\n   |\n___|___\n",
@@ -33,15 +34,14 @@ int existe(const char *a, char c) {
 }
 
 int main() {
-    char mot_a_trouver[] ="AYMANELF";
-    char mot_decouvert[13]; 
+    char mot_a_trouver[]="ENCORE";
+    char mot_decouvert[30];
+  
     cacher(mot_a_trouver,mot_decouvert);
-
-    char lettre;
     int n = 0;
 
     while (n < 11) {
-        int lettre_trouvee = 0;
+        int lettre = 0;
         printf("Mot à deviner : %s\n", mot_decouvert);
         printf("Entrez une lettre : ");
         scanf(" %c", &lettre);
@@ -49,7 +49,7 @@ int main() {
             for (int i = 0; i < strlen(mot_a_trouver); i++) {
                 if (mot_a_trouver[i] == lettre) {
                     mot_decouvert[i] = lettre;
-                    lettre_trouvee = 1;
+                    lettre = 1;
                 }
             }
             if (strcmp(mot_decouvert, mot_a_trouver) == 0) {
